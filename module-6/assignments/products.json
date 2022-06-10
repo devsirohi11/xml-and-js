@@ -1,0 +1,80 @@
+{
+	"products": {
+		"product": [
+			{
+				"productName": "Dog Shirt Gift Basket",
+				"manufacturer": {
+					"_id": "sjb-pet",
+					"__text": "SJB Pet Boutique"
+				},
+				"description": "Something for every day of the week",
+				"prices": {
+					"price": [
+						"US$35.99",
+						"CAD$44.99",
+						"€26.79"
+					]
+				},
+				"productItems": "1200, 1201, 1202, 1203, 1204, 1205, 1206",
+				"_sku": "BOS12DDF2",
+				"_createdAt": "2020-12-23T09:23:44",
+				"_shippable": "true"
+			},
+			{
+				"productName": "Car Curiosity Basket",
+				"manufacturer": {
+					"_id": "sjb-pet",
+					"__text": "SJB Pet Boutique"
+				},
+				"description": "Playtime morning, noon, and night",
+				"prices": {
+					"price": [
+						"US$15.99",
+						"CAD$18.82",
+						"€11.90"
+					]
+				},
+				"productItems": "4430, 6500, 4434",
+				"_sku": "OBOKS34KBKS",
+				"_createdAt": "2019-12-23T17:47:10",
+				"_shippable": "true"
+			},
+			{
+				"productName": "Piggy Snuggle Basket",
+				"manufacturer": {
+					"_id": "acme",
+					"__text": "ACME"
+				},
+				"prices": {
+					"price": [
+						"US$17.50",
+						"CAD$21.96",
+						"€13.03"
+					]
+				},
+				"productItems": "3230, 3232",
+				"_sku": "HVBOSPR292BS",
+				"_createdAt": "2021-04-03T16:15:37",
+				"_shippable": "false"
+			},
+			{
+				"productName": "Dog Snuggle Basket",
+				"manufacturer": {
+					"_id": "acme",
+					"__text": "ACME"
+				},
+				"prices": {
+					"price": [
+						"US$14.25",
+						"CAD$17.88",
+						"€10.61"
+					]
+				},
+				"productItems": "3230, 3232, 3250",
+				"_sku": "BJPSO1342KSLS",
+				"_createdAt": "2021-09-07T15:58:13",
+				"_shippable": "true"
+			}
+		]
+	}
+}
