@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People information</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>IP Address</th>
+        </tr>
+      </thead>
+      <tbody id="customers"></tbody>
+    </table>
+    <script>
+      const xhr = (url, method = "GET") =>
+        new Promise((resolve) => {
+          const xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              resolve(this.responseXML);
+            }
+          };
+          xhttp.open(method, url, true);
+          xhttp.send();
+        });
+
+      const displayData = (xml) => {
+        const xmlDoc = xml;
+        const personNodes = xmlDoc.getElementsByTagName("customer");
+        const tableBody = document.getElementById("customers");
+
+        for (let i = 0; i < personNodes.length; i++) {
+          let row = document.createElement("tr");
+          tableBody.appendChild(row);
+        }
+
+        for (let i = 0; i < personNodes.length; i++) {
+          let td;
+          for (let j = 0; j < 6; j++) {
+            td = document.createElement("td");
+            if (j == 0) {
+              td.innerHTML =
+                personNodes[i].getElementsByTagName(
+                  "id"
+                )[0].childNodes[0].nodeValue;
+            } else if (j == 1) {
+              td.innerHTML =
+                personNodes[i].getElementsByTagName(
+                  "first_name"
+                )[0].childNodes[0].nodeValue;
+            } else if (j == 2) {
+              td.innerHTML =
+                personNodes[i].getElementsByTagName(
+                  "last_name"
+                )[0].childNodes[0].nodeValue;
+            } else if (j == 3) {
+              td.innerHTML =
+                personNodes[i].getElementsByTagName(
+                  "email"
+                )[0].childNodes[0].nodeValue;
+            } else if (j == 4) {
+              td.innerHTML =
+                personNodes[i].getElementsByTagName(
+                  "gender"
+                )[0].childNodes[0].nodeValue;
+            } else {
+              td.innerHTML =
+                personNodes[i].getElementsByTagName(
+                  "ip_address"
+                )[0].childNodes[0].nodeValue;
+            }
+            tableBody.children[i].appendChild(td);
+          }
+        }
+      };
+
+      xhr('people.xml')
+        .then(displayData)
+        .catch((error) => console.error("error"));
+    </script>
+  </body>
+</html> 
