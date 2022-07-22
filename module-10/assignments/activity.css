@@ -1,0 +1,31 @@
+
+
+  :root {
+    background-color: #111;
+  }
+  
+  body {
+    color: white;
+  }
+  
+  Ol {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    
+  }
+  
+  .grid-item {
+    background-color: #333;
+  
+      
+  }
+  
+  .playlist-image {
+    max-width: 200px;
+  }
