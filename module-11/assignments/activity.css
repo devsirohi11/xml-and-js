@@ -1,0 +1,41 @@
+:root {
+    background-color: #111;
+  }
+  
+  body {
+    color: white;
+  }
+  
+  Ol {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+   #sub_ol{
+    list-style-type: none;
+    padding: 0;
+   }
+
+  
+  
+  
+  
+  .genre-card > div > a {
+    color: rgb(225, 120, 120);
+    font: 1em sans-serif;
+  }
+  
+  .playlist-image {
+    max-width: 200px;
+  }
+  #sub_div {
+    background-color: rgb(85, 9, 9);
+    color:white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
